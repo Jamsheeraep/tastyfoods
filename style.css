@@ -1,0 +1,13 @@
+.logo{
+    width: 65px;
+    border: black solid;
+    object-fit: cover;
+}
+img.slide{
+    height: 600px;
+    width: 90%;
+    margin-left: 50px;
+}
+.card img{
+    height: 13em;;
+}

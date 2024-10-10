@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty foods</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAABpFBMVEX////tGyTlHCToAAD8/Pymzjn5+fnu7u6eFxv19fXHHSPCHSPztrj///3yaEu7HSHzcFL/+Pn0elzAAADxXUO4AACeAADfAADzdVf87/DgsLKmFxzl5eXrEBvcGyLSHiTwTEPHCxO0HSLc3NzwUjrzVUz0iGvwJCzz1tfIAADDLCrMUlDU6KG6sD3yyMnhUVHwPTTPeHn2knS/NTrqXl/y4ODrl5nkPUPP5ZXMOTvxp6jE4HvZNjihyyaYTy1/vzHx99ja6rPR2cO/zZ3pjIbjaWnmYFbmen3h7MakvlzkeGnlMA2ixUC1x4boNDrtdGjZTTq7Oi++nDK11lzGlDjwSSTXalewOTbYbT2tuTCowy7OACrmi3jeWCDKWCuxz2LQgT1+AAC+UVO+ez6rVlewdHbCmZr4xLHPZWbZlpe5Siryr5q3gDOhNzvaSinNVkbMaiLHtmHGgyXCoFq6Z0LIs3O/j1KPcROEsy6pXSuCpjyVzV5xw0t1kT5UwE1RkUJ4XTImrk5ndDp4yHGZzoey371xxYSL0ad0azWaczeBgjlXo0WZNHANAAAMCElEQVR4nO2ai3/a1hXH9QKCBCFExkQykizsFAlsAQbxJjatMW7sETukTZOlceqmm0nd9LV1y6Pu0rTptv7TO+dKYJx2aT8VpJ/to18SQLLi+9V53XMvoihfvnz58uXLly9fvnz58uXLly9fvnz58uXr/1/R3xvg5xSNRsMUxYWCvzfIGUU3UkscFQr94oXca4AZKdp5c8kh4sJcMAh/g0FghAP8E0zBCxUOhoNUGN5+4xBn3uO2YVkRlGUZhhR/6SLnY+etpVQKhwvCWyoVCqVCVCgYCodDoTD84UIcODcM57hQ+LdBncqObHa3qv1+hlZATL/fr+a7vYYlvXwD22+nlpaWKLRUiAKIYCgIDOQfB2RwyCEjGs5L4MXtyNWdnZ0CKpPJ0CB8ATYWpJQrjtFcqI3dPwCUZyO8WpK1ubyz7Mrhoh0yVwqb7IPJxs5sBrZnyYP3Hrm2vDw3ksOVOcOEZgOTFcoN15OdwO5MqThrC4jOu5o772JpGi/EYun0wkI6HYsJPK+pKgMGy1vox+ggEOjMrohKm8tIdGGk8xfO7+1lFxbOgQgQ8DjSQKqqJFvgR6PTDrRrG9RsyrtxbZkgXbroamt//xwBQh7BQdFUoCkU+kQFsBddLV8PBAKD2bjQQsddGhG98a4DBEQAJIzMowFQAaJu7/JIi4UMcwOo2p1ZML0zd/4CMr2BevemQ1SqC8KISWUYpsALravlwiLAEDnv/fdWb92eemBFwU7guUuEaG3t6s2RkWLZLGEiRCBNqMtx6VphBEWQ+q0/tu7cef/9noEz9PSojLk5l2ltbe0UKSacQQIovQgJ1ygAS6uFVQxD6+6N66sHzXuMwvSkXx7qV8ueWz5/4aLDdJXkGkFyrMRrDP0SFJzgs/WG3QCi41WMKMjAwPUCS0fiU0vCO5B3jp2u3vwA9MlhWhgzjc00hpKLlUZOH0IRKc+9997Du3c/XDloA9nqsqJsSlOhgoBymdbW7tz/6E+WbUuSURfG0ZSZgEogVDzOUXZChg9lLPeqXoK+CmpoYFWj2XL8l4f8FZKuuQG19ufTmzzSBV5D142lmElFF4ujMR0onHcQCiaonRu3A6sFmu1PIbCiVIQYCqCAKeoaXzpMzKdLvKkgjqrpZjZ3VBw25GLRDRpZJFDKKRRLP7x3fI+hle4UqOJQydFQFz92ISnJlu/PfwRutK18EnzGi2kZXIo2kobwajR6XV7/KRRNMw/u0XSy4r33tXbmSOp9LEm2BcfGPOj+6G4jjCqIR6d3IAPUJqso2lmoqANFa8fv0zRreIa6uoxQb7x7+Mn8Bx8QqIX54WnXFhH13CiOOGmIMVVRaEYTxzGliYdjKPXuDWi58p6h3nHCHKrTuXPzBGr+PvmBbRNnHmJIU1JErvS6OdGFojUTznJlBZJPIxc4UEzs+kNwoFdTkUnv4kVSxhccqAWsNVbdTBzaeEEahrBbSWyGTXMMJQ7xZ0lF1UUSQy4Uf3wd/NfzQgSGqBCoT52myYGSkcnUVVXECJZuApqRg+yr9OpgKfAUQKniEYadfJQ7kol3HSiaj91+CP7zkoBRN6Qu7ZPZzoUCy0h1FfoUPoEfc+gMG5OPsw8PYTipzzK6WCIDS7Y7/giKX71BK31v/pO2EGoPDRVzoT4By1iknxMSkI7xujxxuUOYE4SifXY6caE0/satAk1bnqDsPeyBseVNCy4UlgNZBfF8AieVlj5x38OiAxc/faXs00AHqA8Dn9FKxBOUsYiNJDpPENJpAoUeMjQGDYUE8Srbr0SsSGNIYi3hGgHsZHR7sHiODHPZSagH7S9o1huUhd0tcZ7AxxyoNOZcxdT1RFEiULAMZVTThHKEY2sjb1r1PqvAhGya44qOMfWgvcp4tBRC7WEDBU2KkI5Ro+yjrGLR8Vq8JJaOYOKTDch8rsfSbLVhGMawVHSKw+Q0Q6AGtwsZbzFlwUIgiysogMqW0giVKJ1J6Hg9Z4zbEYshi2RWSYp1uMoiE56O7quMoB4NAg+rtjcoprAMy8yFGKxW6iViKdM8nevgl9uJ09u2+4q7XFb13AgKKCOcpSikeAr68SDwmcemyuoXFheIobR63oFKqkodFr8cJ1l5JRIhEwo0dtD5VXBk6PlwI0Z0oBjGNFWIxnq5Slwp6J8DVMUTE2VUMy2E0rRWPl9HqEYSFuXJfHezVyY7LQpdjcjD4lFeSxJnabp+NJQbRazoUPdFOLAMOw6/CWcfXmg2B194nPukKq2h9zQemFqaLBm8KYpiPdertBzfZFTdTOSGkPv5pALTr5gju1RxG+LeEnl5HIA9hNI/BKjPvTFRVFlBKJ4Yqp6NHRaHluGOkyTxo+nioRu3Rt7kxeLEf7b003gzqjgf8182a4OaV6geQKXTvJYHqH3+TConFcKE6xbSA0dhlnGZ4s4ZmRxJtgG1Na+AUfkHzVotsOKJCH5xg1XT6XSrX85frmdLkz/EygPD6MWJ7tbIkbam18UiFqVkuAlus1zt0xh7eAdfIpTnfQXbgapuIVQOTnCQaIbc6JFs6rf0mwSmy5QwCTn0bENRMmYWjYoBZYumCAsxTEyV/0uzttJse9+CUZlYOqa2ti67UJEqk8SOzqk7vGiBRRqQeGrCnV8sBiYXjfSgMgabLFuSJDXgJvT9Wm0FoDY8Q/WSDtSWC9VgJ3YSNZ2HsW1iBj3HOW0hmxkVT3TfqIOxGEb4K0B1dgfe18gRFpboxFKtmAPlFm1YwrE6qe5kCoEpjiRhvItVHVYLCFWaKN29xFfgvM5Ku+YdykhqsZhWRfcJBCqpgPuSqsnnipvFHKZelyVBnHO2qhFRJasZqsd2ofZD9tkchP9XzebKSudgGtvFUpUBqP7W5cWWE1O54jASGSaOSI2U7LMYcGT0cbWAIWVDV0N3u+U6MVuniYaqBZpT2OGI98B/PHN5BBWXwtijOMsBdxGvsICRI1fDOSMnZnGlDGmIbZYoloqQDQ5TZ0A2Gj1zWYoaE5hFgOJz/+USqXh4JBPXDcfnwF+qzg/d8h+tIRM4r33glccZsazwglr4KZRVqcikdOP+gnPGrFvUyA4WLvlcwO3mgBiq2R5sTAUKizrPZxZdKCkyLBYxz4YMm9SHk52R1Yd4d2eieIVRNNE9WBkcEKaDNkb5dPby8qzGqwUXqpE0zSHl1iuddHhxnGjiUo/FYsBWK5bV6JE+RulKkHrbB7tNZKoN2rifPqXNWEOBNpZZ3HOhyDaPRHZUeLI6L25GIo0ew5Kvs/ArIyj47tdH/Sr/t7+vo51qzcDUfOcWaVVQM2MoHmZbI6OQWQah8qzT7f2M9EePn+4+OWjWmoNAuzk1JhSUBZVnNAcKwt4m7TgWTOSLq2TO6f+ESNWuPH769MmTJweD3fa0v82CRqnLqhrUbALVwrYKOKHzFYcQThHHRv0zX7Exqhq78vXJCTI9WQfPdaJT3dpHSWWwFYGqsM42j9QTEzyWBKnrQE1878cAEn/lmxNgAkutr68fdJwucKoCW4Fl1KTBGbiQI9s8nGSTeuC0DRNIqsbzsX/8+OzZiUP1dGVjZl/4fbyjMsk+xjNjjgp3dNzKZFwDARCfvvLtMxQwPf/urY3xpVMXRMSt44cqDMvAKtgcFU2pQrIuowKOhkB67Mo/vyFIz55/9/2boejpL5iJOu1bx1kyMqwWcrLNScawburkDJHOx6586xC9+GE7HHwdj2VEa/hVxvHdfQKQIBrx8EJs3zXRixffh1/jkzfRZhuwbq9eP/7sQTY7wollP3306F///vpHQvT9mwTotVOhbt+6terq8WOokJhoJ89+IM//RKdbj7B7e+XTHdGVwAjLFRShdUz7k5MX27MxTypEcalXP1e00fx5qB9mhERRS0tBKnj2wZTQy5+gYWu3z0KtP+9sUDOLo6WlEEnjcCoUwqeKwGr4KRwihxx5qCcUpjZW3t4dUz1pEqLZaSm1RJ7BCoZSVCgVBBKKPOQUwseb4NiBwsexNrY7K6DO9uxmkJHwWSd8roijghjxHCgIJZDDf/AShBcqyBGR66MTrzPTxHiv1muh+Q2Knnnz5cuXL1++fPny5cuXL1++fPny5cuXL1//U/oPmq8EDguRingAAAAASUVORK5CYII=" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold" href="#order">Orders</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Deals
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">COD</a></li>
+              <li><a class="dropdown-item" href="#">Online payment</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Credit Card</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link enabled text-white fw-bold" href="#footer" tabindex="-1" aria-disabled="true">Location</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 text-black fw-bold" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-success text-white" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--carousal-->
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="slide" src="83249b85-4931-4260-84da-c4d61237ff7d.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-white fw-bold fs-3">Veg thali </h5>
+              <p class="fw-bold fs-4">From Indian Cuisine food plater consist of veggie paneer.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100 slide" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="slide" src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </section>
+  <!--Orderr Section-->
+  <section id="order">
+     <h4 class="text-center fw-bold mt-5">Order Your Foods Now...</h4>
+     <div class="container">
+         <div class="row my-3">
+            <div class="col-4">
+                <div class="card border-2px border-warning" style="width: 18rem;">
+                    <img src="biriyani.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold text-center">ChickenBiriyani</h5>
+                      <p class="card-text fw-bold text-center">Tasty malabar Chicken Biriyani</p>
+                      <h4 class="text-danger text-center">Rs:199.00</h4>
+                      <a href="#" class="btn btn-success text-center">Order Now</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-2px border-warning" style="width: 18rem;">
+                    <img src="beef.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center ">
+                      <h5 class="card-title fw-bold">Beef fry</h5>
+                      <p class="card-text fw-bold">Tasty Beef Fry.</p>
+                      <h4 class="fw-bold text-danger">Rs:149</h4>
+                      <a href="#" class="btn btn-success">Order Now</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-2px border-warning" style="width: 18rem;">
+                    <img src="dosa.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Dosa</h5>
+                      <p class="card-text fw-bold">Tasty kerala dosa</p>
+                      <h4 class="text-danger">Rs:99.00</h4>
+                      <a href="#" class="btn btn-success">Order Now</a>
+                    </div>
+                  </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-4">
+                <div class="card border-2px border-warning" style="width: 18rem;">
+                    <img src="fish.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Fish Fry</h5>
+                      <p class="card-text fw-bold">Tasty fish fry.</p>
+                      <h4 class="fw-bold text-danger">Rs:89.00</h4>
+                      <a href="#" class="btn bg-success text-white">Order Now</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-2px border-warning" style="width: 18rem;">
+                    <img src="idli.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Idli</h5>
+                      <p class="card-text fw-bold">Tasty Idli</p>
+                      <h4 class="text-danger">Rs:19 .00</h4>
+                      <a href="#" class="btn bg-success text-white">Order Now</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-2px border-warning" style="width: 18rem;">
+                    <img src="sambar.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Sambar</h5>
+                      <p class="card-text fw-bold">Tasty Sambar</p>
+                      <h4 class="text-danger">Rs:99 .00</h4>
+                      <a href="#" class="btn bg-success text-white">Order Now</a>
+                    </div>
+                  </div>
+            </div>
+
+         </div>
+     </div>
+  </section>
+  <!--footer-->
+  <footer>
+    <div class="container" id="footer">
+        <div class="row my-5 bg-warning">
+            <h3 class="text-black text-center">Location</h3>
+            <div class="col-6">
+                
+                <h2 class="text-white">Tasty Foods</h2>
+                <h4>Kochi</h4>
+                <h4>Kerala</h4>
+                <p>Tel:124567809</p>
+                <p>Emali:tastyfood@gmail.com</p>
+                <p>website:www.tasty foods.com</p>
+            </div>
+            <div class="col-6 text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62877.074713013586!2d76.33003045339353!3d9.9491649412278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08736028f7d65b%3A0x7500ad4ba75d81a1!2sHill%20Palace%20Museum!5e0!3m2!1sen!2sin!4v1728497050383!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+  </footer>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</body>
+</html>
